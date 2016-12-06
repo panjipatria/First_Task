@@ -99,11 +99,12 @@ public class taskActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                if (focus_incom==false){
+
                     edit_income.setText("");
-                } else {
+
                     edit_outcome.setText("");
-                }
+                    tx_balance.setText("");
+
             }
         });
 
