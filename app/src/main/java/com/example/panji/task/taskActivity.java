@@ -101,9 +101,9 @@ public class taskActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                     edit_income.setText("");
-
                     edit_outcome.setText("");
                     tx_balance.setText("");
+
 
             }
         });
