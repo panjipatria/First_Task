@@ -53,7 +53,10 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:background="#536DFE"
-                android:padding="25dp"
+                android:paddingTop="50dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+
                 >
 
                 <Button
@@ -89,7 +92,7 @@
                 <Button
                     style="@style/button"
                     android:text="4"
-                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/button_one"
                     android:layout_alignParentLeft="true"
                     android:id="@+id/button_four"
                     android:background="#536DFE"
@@ -99,7 +102,7 @@
                 <Button
                     style="@style/button"
                     android:text="5"
-                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/button_two"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/button_five"
                     android:background="#536DFE"
@@ -109,7 +112,7 @@
                 <Button
                     style="@style/button"
                     android:text="6"
-                    android:layout_centerInParent="true"
+                    android:layout_below="@+id/button_three"
                     android:layout_alignParentRight="true"
                     android:id="@+id/button_six"
                     android:background="#536DFE"
@@ -119,7 +122,7 @@
                 <Button
                     style="@style/button"
                     android:text="7"
-                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/button_four"
                     android:layout_alignParentLeft="true"
                     android:id="@+id/button_seven"
                     android:background="#536DFE"
@@ -129,7 +132,7 @@
                 <Button
                     style="@style/button"
                     android:text="8"
-                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/button_five"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/button_eight"
                     android:background="#536DFE"
@@ -139,9 +142,19 @@
                 <Button
                     style="@style/button"
                     android:text="9"
-                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/button_six"
                     android:layout_alignParentRight="true"
                     android:id="@+id/button_nine"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="0"
+                    android:layout_below="@+id/button_eight"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/button_zero"
                     android:background="#536DFE"
                     android:onClick="press"
                     />

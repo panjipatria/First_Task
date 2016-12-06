@@ -60,17 +60,24 @@ public class taskActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                try {
-                    int in, out, balance;
-                    in = Integer.parseInt(edit_income.getText().toString().trim());
-                    out = Integer.parseInt(edit_outcome.getText().toString().trim());
-                    balance = in - out;
-                    tx_balance.setText("Balance :" + balance);
 
-                }catch (NumberFormatException nfe){
-                    Toast.makeText(getApplicationContext(), "Silahkan Periksa Inputan", Toast.LENGTH_SHORT).show();
+
+
+                    try {
+                        int in, out, balance;
+                        in = Integer.parseInt(edit_income.getText().toString().trim());
+                        out = Integer.parseInt(edit_outcome.getText().toString().trim());
+                        balance = in - out;
+                        tx_balance.setText("Balance :" + balance);
+
+                    }catch (NumberFormatException nfe){
+                        Toast.makeText(getApplicationContext(), "Silahkan Periksa Inputan", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
-            }
+
+
+
         });
 
         fab_dell = (FloatingActionButton) findViewById(R.id.fab_delete);
@@ -82,6 +89,7 @@ public class taskActivity extends AppCompatActivity {
                     int lenght = edit_income.getText().length();
                     if(lenght > 0){
                         edit_income.getText().delete(lenght -1, lenght);
+                        tx_balance.setText("");
                     }
                 }
 
@@ -89,6 +97,7 @@ public class taskActivity extends AppCompatActivity {
                     int lenght = edit_outcome.getText().length();
                     if(lenght > 0){
                         edit_outcome.getText().delete(lenght -1, lenght);
+                        tx_balance.setText("");
                     }
                 }
             }
@@ -100,9 +109,12 @@ public class taskActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+
+
                     edit_income.setText("");
                     edit_outcome.setText("");
                     tx_balance.setText("");
+
 
 
             }
@@ -167,6 +179,9 @@ public class taskActivity extends AppCompatActivity {
                 break;
             case R.id.button_nine:
                 dump = "9";
+                break;
+            case R.id.button_zero:
+                dump = "0";
                 break;
             default:
                 break;
