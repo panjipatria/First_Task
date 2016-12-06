@@ -1,0 +1,194 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".taskActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#536DFE">
+
+            <LinearLayout
+                android:id="@+id/viewOne"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_button"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_income"
+                    android:hint="InCome"
+                    style="@style/input"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_outcome"
+                    android:hint="OutCome"
+                    style="@style/input"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_balance"
+                    android:hint="Balance :"
+                    style="@style/input"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/viewTwo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#536DFE"
+                android:padding="25dp"
+                >
+
+                <Button
+                    style="@style/button"
+                    android:text="1"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/button_one"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="2"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/button_two"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="3"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/button_three"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="4"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/button_four"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="5"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/button_five"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="6"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/button_six"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="7"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:id="@+id/button_seven"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="8"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/button_eight"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+                <Button
+                    style="@style/button"
+                    android:text="9"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/button_nine"
+                    android:background="#536DFE"
+                    android:onClick="press"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_delete"
+            android:src="@drawable/ic_action_floating_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:layout_anchor="@id/viewOne"
+            app:layout_anchorGravity="bottom|right|end"
+            app:backgroundTint="#B2EBF2"
+            app:rippleColor="#FFF" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_balance"
+            android:src="@drawable/ic_action_floating_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:layout_anchor="@id/viewOne"
+            app:layout_anchorGravity="bottom|left|end"
+            app:backgroundTint="#B2EBF2"
+            app:rippleColor="#FFF" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_clear"
+            android:src="@drawable/ic_action_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:layout_anchor="@id/viewOne"
+            app:layout_anchorGravity="bottom|center"
+            app:backgroundTint="#B2EBF2"
+            app:rippleColor="#FFF"
+            />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+
+</RelativeLayout>
